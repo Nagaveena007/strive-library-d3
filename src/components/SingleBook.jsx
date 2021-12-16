@@ -37,8 +37,9 @@ class SingleBook extends Component {
             </Card.Footer>
           </Card>
         </Col>
-        this.state.selectedBook &&
-        <CommentArea asin={this.props.singlebook.asin} />
+        {this.state.selectedBook && (
+          <CommentArea asin={this.props.singlebook.asin} />
+        )}
       </>
     );
   }

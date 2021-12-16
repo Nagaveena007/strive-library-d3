@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Comment from "./Comment";
+import AddComment from "./AddComment";
 
 class CommentArea extends Component {
   state = {
@@ -19,7 +20,7 @@ class CommentArea extends Component {
         }
       );
       if (response.ok) {
-        console.log(response);
+        // console.log(response);
         let comments = await response.json();
         this.setState({ comments: comments });
       }
@@ -33,9 +34,8 @@ class CommentArea extends Component {
   render() {
     return (
       <div>
-        {/*         <Comment comments={this.state.comments} />
-         */}
-        <Comment />
+        <AddComment id={this.props.asin} />
+        <Comment comments={this.state.comments} />
       </div>
     );
   }
