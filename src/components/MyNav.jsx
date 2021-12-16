@@ -12,10 +12,10 @@ const MyNav = ({ search }) => {
       className="sticky-top"
       style={{ height: "70px", fontSize: "large" }}
     >
-      <Navbar.Brand href="#home">Strive Library</Navbar.Brand>
+      <Navbar.Brand href="/">Strive Library</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <NavDropdown title="Select Book Category" id="basic-nav-dropdown">
+        <Nav.Link href="/">Home</Nav.Link>
+        {/*   <NavDropdown title="Select Book Category" id="basic-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Sci-fi</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">Romantic</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">Horror</NavDropdown.Item>
@@ -23,10 +23,10 @@ const MyNav = ({ search }) => {
 
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">History</NavDropdown.Item>
-        </NavDropdown>
+        </NavDropdown> */}
       </Nav>
       <Nav className="mr-sm-2">
-     {/*    <Search searchBook={search} /> */}
+        {/*    <Search searchBook={search} /> */}
         <IoCartOutline
           style={{ color: "white", height: "30px", width: "30px" }}
           className="mt-2 mr-3"

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Row, Form } from "react-bootstrap";
+import { Row, Form, Button, Container } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 class Books extends Component {
   state = {
@@ -9,19 +9,23 @@ class Books extends Component {
   render() {
     return (
       <div>
-        
-        <Form>
-          <Form.Group className="mb-3">
-            <Form.Label>Search</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Search for Books"
-              value={this.state.searchQuery}
-              onChange={(e) => this.setState({ searchQuery: e.target.value })}
-            ></Form.Control>
-          </Form.Group>
-        </Form>
-
+        <Container>
+          <Form>
+            <Form.Group className="mb-3">
+              <Form.Label>
+                {/*               <Button>Search</Button>
+                 */}{" "}
+              </Form.Label>
+              <Form.Control
+                style={{ border: "2px solid #343a40" }}
+                type="text"
+                placeholder="Search for Books"
+                value={this.state.searchQuery}
+                onChange={(e) => this.setState({ searchQuery: e.target.value })}
+              ></Form.Control>
+            </Form.Group>
+          </Form>
+        </Container>
         <Row>
           {this.props.books
             .filter((book) =>
