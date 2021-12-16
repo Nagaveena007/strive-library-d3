@@ -10,12 +10,9 @@ import MyBadge from "./components/MyBadge";
 import SingleBook from "./components/SingleBook";
 import scifi from "./data/scifi.json";
 
-
-
 function App() {
   return (
     <div className="App">
-
       <MyNav />
       <JumbotronPart />
       <WarningSign text="This is a danger alert!" />
